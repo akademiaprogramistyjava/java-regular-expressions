@@ -3,7 +3,7 @@ package pl.szymonleyk.sample;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CountOperator {
+public class QuantityOperator {
     public static void main(String[] args) {
         Pattern pattern;
         Matcher matcher;
