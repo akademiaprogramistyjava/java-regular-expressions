@@ -1,3 +1,11 @@
+import java.time.Clock;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -133,6 +141,29 @@ public class RegularExpressions {
         System.out.println("---------------- zadanie --------------");
         String newString = "abc#d##c".replaceAll("[a-z]#","");
         System.out.println(newString);
+
+
+        LocalDateTime dataICzas = LocalDateTime.now();
+        System.out.println(dataICzas);
+
+        LocalDate dataUrodzenia = LocalDate.of(2001, 01, 19);
+        System.out.println(dataUrodzenia);
+
+
+        dataICzas = LocalDateTime.of(2021, 05, 19, 8, 0);
+        String data = dataICzas.format(DateTimeFormatter.ofPattern("EEEE, HH:mm"));
+        System.out.println(data);
+
+        for (int i = 0; i < 105; i+=7) {
+            dataICzas.plusYears(1).plusNanos(11);
+        }
+
+
+        LocalDate d1 = LocalDate.now();
+        LocalDate d2 = LocalDate.of(1980, 02,11);
+
+        Period.between(d2, d1);
+
 
 
 
